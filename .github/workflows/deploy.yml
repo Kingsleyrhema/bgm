@@ -1,0 +1,35 @@
+name: Deploy to PythonAnywhere
+
+on:
+  push:
+    branches:
+      - main  # Deploy when the main branch is pushed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'  # Adjust the Python version
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Deploy to PythonAnywhere
+      env:
+        USERNAME: ${{ secrets.PYTHONANYWHERE_USERNAME }}
+        API_TOKEN: ${{ secrets.PYTHONANYWHERE_API_TOKEN }}
+      run: |
+        source venv/bin/activate
+        pip install pythonanywhere
+        pa_autoconfigure_django.py https://github.com/Kingsleyrhema/bgm.git
+        pa_reload_webapp.py bgmweb.pythonanywhere.com
