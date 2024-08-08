@@ -24,14 +24,17 @@ jobs:
         source venv/bin/activate
         pip install -r requirements.txt
 
+    - name: Install pythonanywhere
+      run: |
+        source venv/bin/activate
+        pip install pythonanywhere
+
     - name: Deploy to PythonAnywhere
       env:
-        WORKON_HOME: ${{ github.workspace }}/venv
         USERNAME: ${{ secrets.PYTHONANYWHERE_USERNAME }}
         API_TOKEN: ${{ secrets.PYTHONANYWHERE_API_TOKEN }}
       run: |
         source venv/bin/activate
-        pip install pythonanywhere
-        # Use a direct command for deployment without relying on virtualenvwrapper
+        # Use pythonanywhere command if available
         python -m pythonanywhere.pa_autoconfigure_django https://github.com/Kingsleyrhema/bgm.git
         python -m pythonanywhere.pa_reload_webapp bgmweb.pythonanywhere.com
