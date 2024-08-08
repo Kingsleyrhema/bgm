@@ -27,14 +27,26 @@ jobs:
     - name: Install pythonanywhere
       run: |
         source venv/bin/activate
-        pip install pythonanywhere
+        pip install requests  # Install requests for API calls
 
     - name: Deploy to PythonAnywhere
       env:
         USERNAME: ${{ secrets.PYTHONANYWHERE_USERNAME }}
         API_TOKEN: ${{ secrets.PYTHONANYWHERE_API_TOKEN }}
+        DOMAIN_NAME: 'bgmweb'  # Your domain name part
       run: |
         source venv/bin/activate
-        # Use pythonanywhere command if available
-        python -m pythonanywhere.pa_autoconfigure_django https://github.com/Kingsleyrhema/bgm.git
-        python -m pythonanywhere.pa_reload_webapp bgmweb.pythonanywhere.com
+        python -c "
+        import requests
+
+        def reload_webapp(username, token, domain_name):
+            headers = {'Authorization': f'Token {token}'}
+            url = f'https://www.pythonanywhere.com/api/v1/user/{username}/websites/{domain_name}/reload/'
+            response = requests.post(url, headers=headers)
+            if response.status_code == 200:
+                print('Deployment successful')
+            else:
+                print(f'Error: {response.status_code} - {response.content}')
+
+        reload_webapp('$USERNAME', '$API_TOKEN', '$DOMAIN_NAME')
+        "
