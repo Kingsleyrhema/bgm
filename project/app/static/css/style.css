@@ -1,0 +1,124 @@
+/* Navbar Section */
+#offcanvasTop {
+  --bs-offcanvas-height: 80vh;
+  background-color: #c5e1d4;
+}
+
+/* Navbar Section */
+
+
+/* SLIDESHOW SECTION */
+.carousel-item {
+  height: 100vh;
+  min-height: 600px;
+  background: no-repeat center center;
+  background-size: cover;
+}
+.carousel-caption {
+  bottom: 20%;
+}
+/* SLIDESHOW SECTION */
+
+
+/* glowing text in slide show */
+.glow_header{
+  font-size: 90px;
+}
+
+.glow_bd{
+  padding-bottom: 140px;
+}
+.glow {
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation: glow 3s ease-in-out infinite alternate;
+  animation: glow 3s ease-in-out infinite alternate;
+  font-family: 'Orbitron', sans-serif;
+  opacity: 65%;
+}
+
+header {
+  padding-top: 30px; /* Adjust this value based on your navbar height */
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
+  }
+  to {
+    text-shadow: 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f, 0 0 70px #00f, 0 0 80px #00f;
+  }
+}
+
+@-moz-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
+  }
+  to {
+    text-shadow: 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f, 0 0 70px #00f, 0 0 80px #00f;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
+  }
+  to {
+    text-shadow: 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f, 0 0 50px #00f, 0 0 60px #00f, 0 0 70px #00f, 0 0 80px #00f;
+  }
+}
+/* glowing text in slide show */
+
+
+/* Group section */
+.card-img {
+  object-fit: cover;
+}
+
+.card-img-overlay {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem; /* Adjust padding to fit text */
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adjust shadow as needed */
+}
+
+.card {
+  border-radius: 100px;
+  width: 100%; /* Full width */
+  
+}
+.card-title {
+  color: white;
+  font-size: 40px;
+}
+/* Group section */
+
+
+/* WEEKLY ACTIVITIES SECTION */
+.activity-box {
+background-color: #f8f9fa;
+border: 1px solid #dee2e6;
+border-radius: 0.375rem;
+padding: 0.5rem;
+margin-bottom: 1rem;
+text-align: center;
+}
+
+.activity-box .title{
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Tahoma,;
+}
+
+#offcanvasTop {
+  --bs-offcanvas-height: 80vh;
+  background-color: #c5e1d4;
+}
+/* WEEKLY ACTIVITIES SECTION */
+

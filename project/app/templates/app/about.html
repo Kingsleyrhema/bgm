@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belivers Glorious Ministries</title>
+    <link rel="shortcut icon" href="/images/logos/BGM logo_no_bg.png">
+    <!-- importing an external css file -->
+    <link rel="stylesheet" type="text/css" href="ab_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+<header id="site-header">
+  <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <img src="{% static '/images/logos/BGM logo_no_bg.png' %}" width="50px">
+      <a class="navbar-brand fw-bold" href="{% url 'app:index' %}">Believer Glorious Ministries</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'app:index' %}">Home</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'app:about' %}">About</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'app:activities' %}">Activities</a>
+            </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Groups</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Glorious Men</a></li>
+              <li><a class="dropdown-item" href="#">Glorious Women</a></li>
+              <li><a class="dropdown-item" href="#">Glorious Youth</a></li>
+            </ul>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'app:contact' %}">Contact</a>
+          </li>
+          <li class="nav-item">
+              <a href="{% url 'app:signup' %}">
+              <button type="button" class="btn btn-secondary">Become a Member</button>
+              </a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <!-- <button class="btn btn-sm btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="fa-solid fa-magnifying-glass"></i> Search</button> -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Block -->
+  <div class="offcanvas offcanvas-top " tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div class="container pt-5">
+      <div class="offcanvas-header">
+        <h2 class="fw-bold pb-3">Search here</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <form class="position-relative" action="#" method="post">
+          <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="Examples: posts, services,..">
+          <button class="position-absolute top-0 end-0 border-0 bg-transparent py-2 pe-2 text-secondary" type="submit" name="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- NAVBAR SECTION -->
+
+    <!-- HEADER SECTION -->
+    <section class="header-section">
+        <div class="d-flex align-items-center justify-content-center">
+            <h1 class="header-title">BELIEVERS GLORIOUS MINISTRIES</h1> 
+        </div>
+    </section>
+     <!-- HEADER SECTION -->
+
+     <!-- ABOUT THE GO -->
+
+     <div class="container-fluid mt-1 pt-1">
+        <div class="row" style="padding: 3rem;">
+            <div class="col-md-5 mb-3 d-flex flex-column mb-md-0">
+                <div class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img class="img-fluid" src="/images/da_ab/1.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img class="img-fluid" src="/images/da_ab/2.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img class="img-fluid" src="/images/da_ab/3.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img class="img-fluid" src="/images/da_ab/4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7 mb-3 d-flex flex-column justify-content-start mt-4">
+                <div class="about_card">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <h2 class="my-3 text-center"><b><k style="color: #066ed5;">BGM</k> General Overseer</b></h2>
+                        <img src="/images/logos/ logo.jpg" style="width: 15%;" alt="">
+                    </div>  
+                    <p class="mt-1 pt-1"><k style="font-size: 20px;"><b>Uche Emmanuel Ndah,</b></k> <k style="font-size: 20px;">the servant of God anointed to carry out the divine mandate of drawing men to God for them to live a fulfilled life.</k></p>
+                    <p class="mt-2 pt-2" style="font-size: 19px;">
+                        He is the president of God’s commission, Believers Glorious Prayer Ministry (BGPM), the mercy, solution, and praise land, located at No. 30 Sijuade Street by Odo Olowu, Ijesha Express, Surulere Lagos Nigeria. A church that has many branches presently in Nigeria, and with many followers from round the world.
+
+                        He is hails from Asaba, Delta State of Nigeria, married with five kids, three boys and two girls, and blessed all round with the goodness of God.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- ABOUT THE GO -->
+
+
+    <!-- ABOUT MUMMY GO -->
+    <div class="container-fluid mt-2 pt-2">
+        <div class="row" style="padding: 3rem;">
+            <div class="col-md-7 mb-3 d-flex flex-column justify-content-start mt-4">
+                <div class="about_card">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <h2 class="my-3 text-center"><b> Wife of <k style="color: #066ed5;">BGM</k> General Overseer</b></h2>
+                        <img src="/images/logos/dove logo.jpg" style="width: 15%;" alt="">
+                    </div>  
+                    <p class="mt-1 pt-1"><k style="font-size: 20px;"><b>Pst. Mrs. Onyinye Ifeyinwa Uche-Ndah,</b></k> <k style="font-size: 20px;"> is the wife of the presiding pastor of Believers Glorious Prayer Ministry, Pst. Uche E. Ndah. She is a woman of great passion for the manifestation of God in the women that love God.</k></p>
+                    <p class="mt-2 pt-2" style="font-size: 19px;">
+                        Mommy Glorious, as she is fondly called, runs the women fellowship group named Glorious Women, through which a lot of women receive divine transformation spiritually and in marriage. It is through this fellowship group that she also empowers women in their various carriers. She has a lot of ministry visions that she believes to attain through the help of God.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5 mb-3 d-flex flex-column mb-md-0">
+                <div class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img class="img-fluid" src="/images/mu_ab/1.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img class="img-fluid" src="/images/mu_ab/2.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img class="img-fluid" src="/images/mu_ab/3.jpg" alt="">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img class="img-fluid" src="/images/mu_ab/4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ABOUT MUMMY GO -->
+
+
+<!-- ABOUT BGM  -->
+    <div class="justify-content">
+        <h1 class="custom-heading">About <k>BGM</k></h1>
+        <P class="about_bgm">
+            Believers Glorious Prayer Ministry started as just a prayer meeting, with the name, Glorious Assembly, at No.30 Shonde Street, Ijesha Lagos in November 2009. In the year 2010, God gave the church a land in which it is still standing today, at No.30 Sijuade Street, Ijesha Lagos.
+
+In October 2012, the church was registered under the Corporate Affairs Commission of the Federal Republic of Nigeria (CAC) with the name “Believers Glorious Prayer Ministry”, by which it continued her prayer ministry until June 2015, when it started running her activities as a church by the direction of God.
+
+In February 2016, BGPM had her first branch at No.8 Ishen-Olu Estate Odogunyen, Ikorodu Lagos. Also in the year 2019, she had another branch in Oba, Anambra State, at Oba Old Road, by Ageep B/Stop Ayino’s compound, Isu Umunnakwa. And still planting more branches both nationwide and internationally.
+
+BGPM has raised a lot of destinies around the world, which has made her one of the fast-growing churches in Nigeria at this present time. We believe that the God that laid this foundation shall perfect His will over BGPM.
+        </P>
+    </div>
+<!-- ABOUT BGM -->
+
+
+    <!-- Footer Section -->
+    <footer id="site-footer">
+        <div class="bg-success bg-opacity-25 py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-xl-3 col-sm-12">
+                <h5 class="pb-3"><i class="fa-solid fa-user-group pe-1"></i> About us</h5>
+                <span class="text-secondary">Believers Glorious Prayer Ministry started as just a prayer meeting, with the name, Glorious Assembly, at No.30 <a href="/about.html">READ MORE</a></span>
+              </div>
+              <div class="col-md-6 col-xl-3 col-sm-12">
+                <h5 class="pb-3"><i class="fa-solid fa-link pe-1"></i>Links</h5>
+                <ul>
+                  <li><a href="/index.html" class="text-decoration-none link-secondary">Home</a></li>
+                  <li><a href="/about.html" class="text-decoration-none link-secondary">About Us</a></li>
+                  <li><a href="/contact.html" class="text-decoration-none link-secondary">Contact Us</a></li>
+                  <li><a href="#" class="text-decoration-none link-secondary">Groups</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-xl-3 col-sm-12">
+                <h5 class="pb-3"><i class="fa-solid fa-location-dot pe-1"></i> Our location</h5>
+                <span class="text-secondary">
+                    30, Sijuade Str,<br>
+                    By Odo-Olowu B/Stop, Ijesha Express,<br>
+                    Surulere, Lagos, Nigeria.<br>
+                </span>
+              </div>
+              <div class="col-md-6 col-xl-3 col-sm-12">
+                <h5 class="pb-3"><i class="fa-solid fa-paper-plane pe-1"></i> Stay updated</h5>
+                <form>
+                  <input type="text" class="w-100 mb-2 form-control" name="" placeholder="Email ID">
+                  <button class="w-100 btn btn-dark">Subscribe now</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark py-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <ul class="list-inline mb-0">
+                  <li class="list-inline-item"><a class="btn btn-outline-secondary" href="#"><i class="fa-solid fa-brands  fa-facebook-f"></i></a></li>
+                  <li class="list-inline-item"><a class="btn btn-outline-secondary" href="#"><i class="fa-solid fa-brands fa-youtube"></i></a></li>
+                  <li class="list-inline-item"><a class="btn btn-outline-secondary" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                  <!-- <li class="list-inline-item"><a class="btn btn-outline-secondary" href="#"><i class="fa-brands fab fa-linkedin-in"></i></a></li> -->
+                  <!-- <li class="list-inline-item"><a class="btn btn-outline-secondary" href="#"><i class="fa-brands fab fa-github"></i></a></li> -->
+                </ul>
+              </div>
+              <div class="col-md-6 col-sm-12"><span class="text-secondary pt-1 float-md-end float-sm-start">&copy; 2024 Believers Glorious Ministries. All Rights Reserved.</span></div>
+            </div> 
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

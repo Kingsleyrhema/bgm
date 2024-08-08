@@ -1,0 +1,38 @@
+.header-section {
+
+    padding: 60px 0;
+    text-align: center;
+}
+.header-title {
+    font-family: 'Roboto', sans-serif; /* Change to your preferred font */
+    font-size: 2.5rem;
+    color: #066ed5;
+    text-decoration: underline;
+}
+.vertical-line {
+    position: relative;
+    border-left: 9px solid #066ed5; /* Change color and width as needed */
+    height: 100%;
+    width: 900px;
+
+}
+.about_card {
+    /* padding: 3rem; */
+    background-color: white;
+}
+
+.custom-heading {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.custom-heading k {
+    color: #066ed5;
+}
+
+.about_bgm{
+    padding: 3rem;
+    line-height: 40px;
+    font-size: 20px;
+}
