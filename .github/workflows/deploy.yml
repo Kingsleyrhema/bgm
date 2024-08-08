@@ -22,7 +22,9 @@ jobs:
       run: |
         python -m venv venv
         source venv/bin/activate
+        pip install --upgrade pip
         pip install -r requirements.txt
+        pip install pythonanywhere virtualenvwrapper
 
     - name: Deploy to PythonAnywhere
       env:
@@ -31,6 +33,6 @@ jobs:
         API_TOKEN: ${{ secrets.PYTHONANYWHERE_API_TOKEN }}
       run: |
         source venv/bin/activate
-        pip install pythonanywhere
+        source /usr/local/bin/virtualenvwrapper.sh
         pa_autoconfigure_django.py https://github.com/Kingsleyrhema/bgm.git
-        pa_reload_webapp.py bgmweb.pythonanywhere.com
+        pa_reload_webapp.py ${{ secrets.PYTHONANYWHERE_USERNAME }}.pythonanywhere.com
